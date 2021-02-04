@@ -27,7 +27,7 @@ import io.jmix.data.DataConfiguration;
 import io.jmix.data.impl.JmixEntityManagerFactoryBean;
 import io.jmix.data.impl.JmixTransactionManager;
 import io.jmix.data.persistence.DbmsSpecifics;
-import io.jmix.dataeclipselink.DataEclipselinkConfiguration;
+import io.jmix.eclipselink.EclipselinkConfiguration;
 import io.jmix.email.EmailConfiguration;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
@@ -50,7 +50,7 @@ import javax.sql.DataSource;
 import java.util.Collections;
 
 @Configuration
-@Import({CoreConfiguration.class, DataConfiguration.class, DataEclipselinkConfiguration.class,
+@Import({CoreConfiguration.class, DataConfiguration.class, EclipselinkConfiguration.class,
         EmailConfiguration.class})
 @PropertySource("classpath:/test_support/test-app.properties")
 @EnableWebSecurity
