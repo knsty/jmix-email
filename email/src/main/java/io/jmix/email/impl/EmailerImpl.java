@@ -277,7 +277,7 @@ public class EmailerImpl implements Emailer {
         int callsToSkip = emailerProperties.getScheduledSendingDelayCallCount();
         int count = callCount.getAndAdd(1);
         if (count < callsToSkip) {
-            return null;
+            return "";
         }
 
         String resultMessage;
